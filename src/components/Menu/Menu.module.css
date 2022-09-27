@@ -1,0 +1,27 @@
+.menuBlock {
+    width: 250px;
+    height: 739px;
+    border-right: 2px solid;
+    border-color: aliceblue;
+    background-color: rgb(12, 12, 114);
+}
+
+.titleMenu, .selection {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    color: aliceblue;
+}
+
+.titleMenu {
+    border-bottom: 2px solid;
+    font-size: 44px;
+    height: 100px;
+}
+
+.selection {
+    font-size: 25px;
+    text-align: center;
+    height: 60px;
+}
