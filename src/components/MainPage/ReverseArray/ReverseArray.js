@@ -32,24 +32,24 @@ const ReverseArray = () => {
     //     return rand;
     // }
 
-  return (
-    <div className={classes.reverseArrayContainer}>
-        <div className={classes.blockArrayContainer}>
-            <ArrayBlock />
-            <ArrayBlock />
-            <ArrayBlock />
-            <ArrayBlock />
-            <ArrayBlock />
-            <ArrayBlock />
+    return (
+        <div className={classes.reverseArrayContainer}>
+            <div className={classes.blockArrayContainer}>
+                <ArrayBlock />
+                <ArrayBlock />
+                <ArrayBlock />
+                <ArrayBlock />
+                <ArrayBlock />
+                <ArrayBlock />
+            </div>
+            <div className={classes.randomButtonContainer}>
+                <button className={classes.randomArray}>Random Array</button>
+            </div>
+            <div className={classes.reverseButtonContainer}>
+                <button className={classes.reverseArray}>Reverse Array</button>
+            </div>
         </div>
-        <div className={classes.randomButtonContainer}>
-            <button className={classes.randomArray}>Random Array</button>
-        </div>
-        <div className={classes.reverseButtonContainer}>
-            <button className={classes.reverseArray}>Reverse Array</button>
-        </div>
-    </div>
-  )
+    )
 }
 
-export default ReverseArray
+export default ReverseArray;
