@@ -3,7 +3,7 @@ import classes from './ArrayBlock.module.css'
 
 const ArrayBlock = () => {
   return (
-    <div className={classes.blockArray}></div>
+    <div className={classes.blockArray} id='blockArray'></div>
   )
 }
 
