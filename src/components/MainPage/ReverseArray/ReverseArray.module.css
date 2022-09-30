@@ -1,21 +1,20 @@
 .reverseArrayContainer {
     display: inline-block;
-    width: 790px;
-    height: 300px;
-    margin-top: 100px;
+    width: 100%;
+    height: 40%;
+    margin-top: 11%;
 }
 
 .blockArrayContainer {
-    margin-left: 20px;
-    margin-top: 40px;
+    margin-left: 2vmax;
+    margin-top: 4vmax;
 }
 
 .randomArray, .reverseArray {
-    width: 110px;
-    height: 50px;
-    top: 120px;
+    width: 7vmax;
+    height: 3vmax;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 1vmax;
     cursor: pointer;
     color: aliceblue;
     background-color: #020024;
@@ -27,12 +26,16 @@
     transform: scale(.98);
 }
 
+.randomButtonContainer, .reverseButtonContainer {
+    width: 8.5%;
+}
+
 .randomButtonContainer {
-    margin-top: -54px;
-    margin-left: 630px;
+    margin-top: 4vmax;
+    margin-left: 9.2vmax;
 }
 
 .reverseButtonContainer {
-    margin-top: 60px;
-    margin-left: 300px;
+    margin-top: -3vmax;
+    margin-left: 19.4vmax;
 }
