@@ -4,7 +4,7 @@ import classes from './ReverseArray.module.css';
 
 const ReverseArray = () => {
 
-    const [arrayRan, setArrayRan] = useState([]);
+    const [arrayRan, setArrayRan] = useState([1, 2, 3, 4, 5]);
 
     const handleOnClickRandom = () => {
         function random() {
@@ -19,17 +19,13 @@ const ReverseArray = () => {
                 let l = range - i - 1;
                 m[r] = (l in m) ? m[l] : l;
             }
-            //return a;
-            console.log(a)
             for (let i = 0; i < count; i++) {
                 randomArray[i] = a[i]
             }
             return randomArray;
-           // return Math.floor(Math.random() * max);
         }
         const randomArray = random(arrayRan);
         setArrayRan(randomArray);
-        console.log(randomArray);
     }
 
     const [array, setArray] = useState([1, 2, 3, 4, 5]);
@@ -47,12 +43,12 @@ const ReverseArray = () => {
             }
             return newArray;
         }
-        const newArray = reverse(array);
+        const newArray = reverse(arrayRan);
         setArray(newArray);
     }
 
     const getArrayContent = () => {
-        return (array.map((item, index) => {
+        return (arrayRan.map((item, index) => {
             return (<ArrayBlock value={item} key={index} />)
         }));
     }
