@@ -7,8 +7,8 @@ const ReverseArray = () => {
     const [arrayRan, setArrayRan] = useState([]);
 
     const handleOnClickRandom = () => {
-        const randomArray = random(arrayRan);
         function random() {
+            const randomArray = [];
             const range = 100;
             const count = 5;
             let m = {};
@@ -19,29 +19,36 @@ const ReverseArray = () => {
                 let l = range - i - 1;
                 m[r] = (l in m) ? m[l] : l;
             }
-            return a;
+            //return a;
+            console.log(a)
+            for (let i = 0; i < count; i++) {
+                randomArray[i] = a[i]
+            }
+            return randomArray;
            // return Math.floor(Math.random() * max);
-          }
-
+        }
+        const randomArray = random(arrayRan);
         setArrayRan(randomArray);
-        console.log(random(100));
+        console.log(randomArray);
     }
 
     const [array, setArray] = useState([1, 2, 3, 4, 5]);
       
     const handleOnClickReverse = () => {
-        const newArray = reverse(array)
         function reverse(arr){
-
-            for ( let i=0; i <= (arr.length - 1) / 2 ; i++) {
+            const newArray = [];
+            for ( let i = 0; i <= (arr.length - 1) / 2 ; i++) {
                 const element = arr[i];
                 arr[i] = arr[arr.length - (i+1)];
                 arr[arr.length - (i+1)] = element;
             }
-            return arr
+            for ( let i = 0; i <= (arr.length-1); i++) {
+                newArray[i] = arr[i]; 
+            }
+            return newArray;
         }
+        const newArray = reverse(array);
         setArray(newArray);
-        console.log(newArray);
     }
 
     const getArrayContent = () => {
@@ -49,8 +56,6 @@ const ReverseArray = () => {
             return (<ArrayBlock value={item} key={index} />)
         }));
     }
-
-
 
     return (
         <div className={classes.reverseArrayContainer}>
