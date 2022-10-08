@@ -1,0 +1,17 @@
+.reverseArrayContainer {
+    display: inline-block;
+    width: 100%;
+    height: 40%;
+    margin-top: 11%;
+}
+
+.blockArrayContainer {
+    margin-left: 2vmax;
+    margin-top: 4vmax;
+}
+
+.buttonContainer {
+    display: grid;
+    background-color: green;
+    width: 50%
+}

@@ -1,5 +1,5 @@
-import MainPage from "./components/MainPage/MainPage";
-import Menu from "./components/Menu/Menu";
+import MainPage from "./application/MainPage/MainPage";
+import Menu from "./application/Menu/Menu";
 
 function App() {
     return (
