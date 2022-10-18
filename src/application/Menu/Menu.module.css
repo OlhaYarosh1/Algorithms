@@ -7,7 +7,7 @@
     background-color: #020024;
 }
 
-.titleMenu, .selection {
+.titleMenu, .selectionReverse, .selectionSort {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -22,8 +22,8 @@
     height: 9.7vmax;
 }
 
-.selection {
+.selectionReverse, .selectionSort {
     font-size: 2.5vmax;
     text-align: center;
-    height: 20%;
+    height: 15%;
 }

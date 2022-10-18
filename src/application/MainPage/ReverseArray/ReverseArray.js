@@ -14,7 +14,7 @@ const ReverseArray = () => {
     }
  
     const handleOnClickReverse = () => {
-        const newArray = reverse(array) + [];
+        const newArray = [...reverse(array)];
         setArray(newArray);
     }
 
@@ -29,10 +29,8 @@ const ReverseArray = () => {
             <div className={classes.blockArrayContainer}>
                 {getArrayContent()}
             </div>
-            <div className={classes.buttonContainer}>
-                <Button title='Randomise' onClick={handleOnClickRandom} />
-                <Button title='Reverse' onClick={handleOnClickReverse} />
-            </div>
+                <div className={classes.randomButton}><Button onClick={handleOnClickRandom} title={'Random'} /></div>
+                <div className={classes.reverseButton}><Button onClick={handleOnClickReverse} title={'Reverse'} /></div>
         </div>
     )
 }
