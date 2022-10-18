@@ -4,7 +4,9 @@ import classes from './Menu.module.css';
 const Menu = () => {
     return (
         <div className={classes.menuBlock}>
-            <div className={classes.titleMenu}>Menu</div>
+            <a href='/'>
+                <div className={classes.titleMenu}>Menu</div>
+            </a>
             <a href='/ReverseArray'>
                 <div className={classes.selectionReverse}>Reverse Array</div>
             </a>
