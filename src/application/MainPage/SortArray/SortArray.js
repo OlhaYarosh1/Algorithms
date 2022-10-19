@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ArrayBlock from '../ReverseArray/ArrayBlock/ArrayBlock';
 import classes from './SortArray.module.css';
-import { random } from '../ReverseArray/array-utils';
+import { random, sort } from '../ReverseArray/array-utils';
 import Button from '../../../components/Button';
 
 const SortArray = () => {
@@ -13,20 +13,26 @@ const SortArray = () => {
         setArray(randomArray);
     }
 
+    const handleOnClickSort = () => {
+        const newArray = [...sort(array)];
+        setArray(newArray);
+    }
+
     const getArrayContent = () => {
         return (array.map((item, index) => {
             return <ArrayBlock value={item} key={index} />
         }));
     }
 
-  return (
-    <div className={classes.reverseArrayContainer}>
-    <div className={classes.blockArrayContainer}>
-        {getArrayContent()}
-    </div>
-        <div className={classes.randomButton}><Button onClick={handleOnClickRandom} title={'Random'} /></div>
-</div>
-  )
+    return (
+        <div className={classes.reverseArrayContainer}>
+            <div className={classes.blockArrayContainer}>
+                {getArrayContent()}
+            </div>
+            <div className={classes.randomButton}><Button onClick={handleOnClickRandom} title={'Random'} /></div>
+            <div className={classes.reverseButton}><Button onClick={handleOnClickSort} title={'Sort'} /></div>
+        </div>
+    )
 }
 
 export default SortArray;
