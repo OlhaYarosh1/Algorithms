@@ -25,12 +25,12 @@ const SortArray = () => {
     }
 
     return (
-        <div className={classes.reverseArrayContainer}>
+        <div className={classes.sortArrayContainer}>
             <div className={classes.blockArrayContainer}>
                 {getArrayContent()}
             </div>
             <div className={classes.randomButton}><Button onClick={handleOnClickRandom} title={'Random'} /></div>
-            <div className={classes.reverseButton}><Button onClick={handleOnClickSort} title={'Sort'} /></div>
+            <div className={classes.sortButton}><Button onClick={handleOnClickSort} title={'Sort'} /></div>
         </div>
     )
 }
