@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ArrayBlock from './ArrayBlock/ArrayBlock';
+import ArrayBlock from '../../../components/ArrayBlock/ArrayBlock';
 import classes from './ReverseArray.module.css';
-import { random, reverse } from './array-utils';
-import Button from '../../../components/Button';
+import { random, reverse } from '../../../utils/array-utils';
+import Button from '../../../components/Button/Button';
 
 const ReverseArray = () => {
 
@@ -18,9 +18,17 @@ const ReverseArray = () => {
         setArray(newArray);
     }
 
+    const calcState = () => {
+        return 'unused';
+    }
+
     const getArrayContent = () => {
         return (array.map((item, index) => {
-            return <ArrayBlock value={item} key={index} />
+            const state = calcState(index);
+            return <ArrayBlock 
+                value={item} 
+                key={index} 
+                state={state} />
         }));
     }
 
@@ -29,8 +37,12 @@ const ReverseArray = () => {
             <div className={classes.blockArrayContainer}>
                 {getArrayContent()}
             </div>
-                <div className={classes.randomButton}><Button onClick={handleOnClickRandom} title={'Random'} /></div>
-                <div className={classes.reverseButton}><Button onClick={handleOnClickReverse} title={'Reverse'} /></div>
+            <div className={classes.randomButton}>
+                <Button onClick={handleOnClickRandom} title={'Random'}/>
+            </div>
+            <div className={classes.reverseButton}>
+                <Button onClick={handleOnClickReverse} title={'Reverse'}/>
+            </div>
         </div>
     )
 }
