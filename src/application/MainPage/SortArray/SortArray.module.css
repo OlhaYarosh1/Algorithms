@@ -1,6 +1,6 @@
 .sortArrayContainer {
     display: grid;
-    grid-template-columns: repeat(16, 6.2%);
+    grid-template-columns: repeat(15, 7%);
     width: 100%;
     margin-top: 14.5%;
 }

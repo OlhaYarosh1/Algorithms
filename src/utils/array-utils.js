@@ -20,15 +20,15 @@ export const reverse = (arr) => {
     return arr;
 }
 
-var i = 0;
-var j = 0;
-var arr = [];
+let i = 0;
+let j = 0;
+let arr = [];
 
 export const initSort = (inArr) => {
     arr = inArr;
 }
 
-export const doSortStep = (onComparison, onFinish) => {
+export const doSortStep = (onComparison, onFinish, onClear) => {
     j = j + 1;
 
     if (j >= arr.length) {
