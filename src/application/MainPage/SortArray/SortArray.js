@@ -29,8 +29,8 @@ const SortArray = () => {
                 () => {
                     clearInterval(intervalId);
                     setHighlightedIndexes([]);
-                });
-        }, 400);
+                });    
+        }, 1000);
     }
 
     const onClickSort = () => {

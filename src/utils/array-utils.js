@@ -28,7 +28,15 @@ export const initSort = (inArr) => {
     arr = inArr;
 }
 
-export const doSortStep = (onComparison, onFinish, onClear) => {
+export const doSortStep = (onComparison, onFinish) => {
+    //finish
+    if (i === arr.length - 2 && j === arr.length - 1) {
+        onFinish();
+        i = 0;
+        j = 0;
+        return;
+    }
+    
     j = j + 1;
 
     if (j >= arr.length) {
@@ -45,12 +53,5 @@ export const doSortStep = (onComparison, onFinish, onClear) => {
         const tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
-    }
-
-    //finish
-    if (i === arr.length - 2 && j === arr.length - 1) {
-        onFinish();
-        i = 0;
-        j = 0;
     }
 }
